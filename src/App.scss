@@ -4,6 +4,8 @@
 *:after,
 *:before {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -35,13 +37,13 @@ button {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1235px) {
   .container {
-    width: 960px;
+    width: 1235px;
   }
 }
 
-.topbar {
+.header {
   backface-visibility: hidden;
   background-color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, .07);
@@ -49,22 +51,35 @@ button {
   padding: 10px 16px;
   position: fixed;
   top: 0;
+  z-index: 1;
   width: 100%;
 }
 
-.topbar .container {
+.header .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
-.topbar__logo {
+.header__logo {
   display: inline-block;
   height: 40px;
+  font-size: 3rem;
 }
 
-.topbar__logo svg {
-  height: 100%;
+.header__icons {
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__icons button {
+  display: inline-block;
+  margin: 1px;
+}
+
+.header__icons svg {
+  font-size: 2rem;
 }
 
 .filters {
@@ -213,4 +228,115 @@ button {
 
 .contact__data:nth-child(2) {
   color: #4C84FF;
+}
+
+@media screen and (min-width: 992px){
+  .catalog {
+    justify-content: left;
+  }
+}
+.catalog {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+
+.catalog__content {
+  display: block;
+  margin: 0 auto;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  width: 100%;
+  
+}
+
+@media screen and (min-width: 992px) {
+.catalog__box {
+    justify-content: left;
+}
+}
+
+.catalog__box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -.25rem;
+  margin-right: -.25rem;
+}
+
+.catalog__count {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.card {
+  width: 24.5%;
+  margin-bottom: 5px;
+  margin: 2px;
+  text-align: center;
+  transition: .2s ease-in-out;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.39);
+}
+
+.card-img-top {
+  overflow: hidden;
+  width: 100%;
+  
+}
+
+.card__percentageDiscount {
+  
+  background-color: black;
+  position: absolute;
+  top: 0;
+  font-size: 1.2rem;
+  right: 0;
+  padding: 3px;
+  color: #fff;
+  
+}
+
+.card__pricing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__price {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.card__price--from {
+  color: #a7a7a7;
+  text-decoration: line-through;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.card-title {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.card-text {
+  margin-top: 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
 }
