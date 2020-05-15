@@ -267,6 +267,12 @@ button {
   font-weight: 500;
 }
 
+@media screen and (max-width: 552px){
+  .catalog .card {
+    width: 100%;
+  }
+}
+
 .card {
   width: 24.5%;
   margin-bottom: 5px;
