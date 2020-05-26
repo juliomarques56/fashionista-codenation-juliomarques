@@ -1,0 +1,40 @@
+
+.productSingle {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ProductSingle__img {
+    width: 50%;
+    margin: 0;
+}
+
+.productSingle__sizes {
+    width: 100%;
+    
+}
+
+.productSingle__sizes span {
+    font-size: 1.4rem;
+    color: #a7a7a7;
+    margin: 14px 0;
+    display: block;
+}
+
+
+.productSingle__descriptions {
+    width: 50%;
+    line-height: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 16px;
+    color: #41414d;
+    
+}
+
+.ProductSingle__button {
+    width: 100%;
+    padding: 20px 0;
+}

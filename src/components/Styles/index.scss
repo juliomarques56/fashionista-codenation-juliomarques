@@ -1,0 +1,31 @@
+.container {
+  width: 100%;
+  margin: 20px auto;
+}
+
+@media screen and (min-width: 1235px) {
+  .container {
+    width: 1235px;
+    justify-content: left;
+  }
+}
+
+.count__product {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 5px;
+    color: #717171;
+}
+
+.catalog__area {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -.25rem;
+    margin-right: -.25rem;
+}
+
+@media screen and (min-width: 992px) {
+    .catalog__area {
+        justify-content: left;
+    }
+}
