@@ -1,19 +1,36 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 import { v4 as uuidv4 } from "uuid";
 
 import { connect, useDispatch } from "react-redux";
-import { removeProductToCart, addProductToCart, toggleCartVisible } from "../../store/actions/cart";
+import { removeProductToCart, addProductToCart, toggleCartVisible, finishPurchase } from "../../store/actions/cart";
 import { groupProducts, sumProducts } from "../../utils/products";
 
 import CartProduct from '../CartProduct'
 
+import bagEmpty from '../../assets/img/icon_bag.png';
 import { FaArrowLeft } from "react-icons/fa";
 import './style.scss';
 
 function Cart({ visible = false, cartItems = [], count }) {
-    const dispatch = useDispatch();
+  const history = useHistory();
+  const dispatch = useDispatch();
 
+  const handleClickHome = () => {
+    dispatch(toggleCartVisible());
+    history.push("/");
+	};
+
+  const handlePurchase = (product) => {
+    const cartPurchase = cartItems.map(
+      (item) => item.selectedSize !== product.selectedSize
+    );
+    dispatch(toggleCartVisible());
+    history.push("/");
+    dispatch(finishPurchase(cartPurchase));
+    
+  };
   const RemoveOneProduct = (product) => {
     const productToRemove = { ...product };
 
@@ -61,7 +78,8 @@ function Cart({ visible = false, cartItems = [], count }) {
             <main className="drawer__content">
               {count === 0 && (
                 <span className="cart__empty">
-                  Sua sacola está vazia
+                  <img src={bagEmpty} alt=""/>
+                  <p>Sua sacola esta vazia!</p>
                 </span>
                 
               )}
@@ -76,7 +94,16 @@ function Cart({ visible = false, cartItems = [], count }) {
               ))}
             </main>
             <footer className="footer">
-                <p>Subtotal - {sumProducts(cartItems)}</p>
+              <div className="button">
+                <button type="button" className="button__keepBuying button__keepBuying--style"  onClick={handleClickHome}>Continuar Comprando</button>
+                <span className="subtotal">
+                  <p>Subtotal - {sumProducts(cartItems)}</p>
+                </span>
+              </div>
+              
+              <div className="button">
+                <button type="button" className="button__keepBuying button__keepBuying--size" onClick={handlePurchase}>Finalizar Compra</button>
+              </div>
             </footer>
         </div>
     )

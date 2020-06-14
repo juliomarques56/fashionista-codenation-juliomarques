@@ -17,3 +17,10 @@ export const addProductToCart = (product) => {
       type: "TOGGLE_CART_VISIBLE",
     };
   };
+
+  export const finishPurchase = (products) => {
+    return {
+      type: "FINISH_PURCHASE_CART",
+      products,
+    };
+  };

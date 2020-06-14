@@ -6,7 +6,7 @@ import { toggleCartVisible } from "../../store/actions/cart";
 import { toggleSearchVisible } from "../../store/actions/search";
 
 import Counter from '../Counter'
-import logo from '../../assets/img/Logo_mariamel.png';
+import logo from '../../assets/img/Logo_mariamel--white.png';
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import './style.scss';
 

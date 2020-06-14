@@ -38,7 +38,11 @@ function ProductInfo({
         <div className="productSingle" name={name}>	
             <figure className="ProductSingle__img">
                 <img src={image ? image:ImgUnavailable} className="card__img" alt={name} />
-                {discount_percentage ? <span className="card__percentageDiscount">{discount_percentage} OFF</span>: ''}
+                {discount_percentage ? 
+                    <div className="card__percentageDiscount">
+                        <span className="percentageDiscount">{discount_percentage} <br/> OFF</span>
+                    </div>
+                : ''}
             </figure>
             
             <div className="productSingle__descriptions">

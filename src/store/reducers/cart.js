@@ -27,6 +27,13 @@ const INITIAL_STATE = {
           items: newProducts,
           count: newProducts.length,
         };
+
+      case "FINISH_PURCHASE_CART":
+        return {
+          ...state,
+          items: [],
+          count: 0,
+        };
   
       default:
         return state;

@@ -13,14 +13,18 @@
 }
 
 .card__percentageDiscount {
+    border-radius: 50%;
     background-color: black;
     position: absolute;
-    top: 0;
+    padding: 10px;
+    top: 3px;
+    right: 3px;
+}
+
+.percentageDiscount {
     font-size: 1.2rem;
-    right: 0;
-    padding: 3px;
     color: #fff;
-  }
+}
 
 .product__sizes {
     width: 100%;  
@@ -118,6 +122,11 @@
     font-size: 1.8rem;
     border-radius: 6px;
     box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.51);
+    transition: .2s ease-in-out;
+}
+
+.button__addProduct:hover {
+    background-color: #09aa31;
 }
 
 @media all and (max-width: 568px) {

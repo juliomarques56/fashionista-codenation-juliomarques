@@ -16,7 +16,12 @@ function Products({
 	return (
 		<div className="card" onClick={handleClickProduct}>	
 			<img src={image ? image:ImgUnavailable} className="card__img" alt={name} />
-			{discount_percentage ? <span className="card__percentageDiscount">{discount_percentage} OFF</span>: ''}
+			{discount_percentage ? 
+				<div className="card__percentageDiscount">
+					<span className="percentageDiscount">{discount_percentage} <br/> OFF</span>
+				</div>
+			: ''}
+			
 			<div className="card__body">
 			<h5 className="card__name ">{name}</h5>
 				<div className="card__pricing">

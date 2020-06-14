@@ -11,7 +11,7 @@ import { v4 as uuidv4 } from "uuid";
 import { format } from "../../utils/FormatLink";
 import { searchProductsByName } from "../../utils/products";
 
-import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowLeft, FaSearch } from "react-icons/fa";
 import SearchProduct from '../SearchProduct'
 import './style.scss';
 
@@ -67,11 +67,9 @@ function Search({ visible, products, productsFound, textSearch }) {
                     </div>
                 </div>
                 {productsFound.length === 0 && (
-                  <span className="content__empty">
-                    Nenhum item encontrado!
-                  </span>
-                  
+                  <FaSearch className="content__empty"/>
                 )}
+                
                 {productsFound.map((product) => (
                   <SearchProduct
                     key={uuidv4()}

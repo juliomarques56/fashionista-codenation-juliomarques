@@ -21,7 +21,7 @@
 .search__header {
     width: 100%;
     height: 60px;
-    background-color: white;
+    background-color: #000;
     display: flex;
     justify-content: flex-start;
     padding: 20px;
@@ -31,6 +31,7 @@
     width: 25px;
     height: 25px;
     font-size: 2rem;
+    color: #fff;
 }
 
 
@@ -38,6 +39,7 @@
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0 auto;
+    color: #fff;
 }
 
 .search__content {
@@ -55,10 +57,9 @@
 }
 
 .search__input {
-    background: #fff;
-    border-radius: 4px;
+    background: transparent;
     border: none;
-    box-shadow: 0 0 1px 0 rgba(0,0,0,.2);
+    border-bottom: 1px solid #000;
     color: #212529;
     font-size: 1.4rem;
     font-weight: 600;
@@ -74,7 +75,7 @@
 }
 
 .content__empty {
-    font-size: 2rem;
+    font-size: 8rem;
     position: absolute;
     top: 50%;
     display: flex;
