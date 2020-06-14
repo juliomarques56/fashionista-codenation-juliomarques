@@ -1,55 +1,32 @@
-# SPA: App de Contatos - PARTE 2
+# Projeto final Codenation - Fashionista E-commerce
 
 ## Objetivo:
-O desafio é desenvolver um *SPA (Single Page Application)* de uma lista de contatos em **React** com as seguintes funcionalidades:
+Como um profissional front-end, você será responsável por desenvolver as principais funcionalidades de um e-commerce de moda feminina, o Fashionista, garantindo a melhor experiência possível para os usuários interagirem com os produtos.
 
 -  Consumir os dados de contato através de uma API Rest, usando a *Fetch API* do Javascript.
 -  Busca de um contato aplicando filtro em **tempo real**.
 -  Aplicar filtros de ordenação por *Nome*, *País*, *Empresa*, *Departamento* e *Data de Admissão*.
 
-### API de Contatos:
+### Endpoint - Catálogo de Produtos:
 
-GET: *https://5e82ac6c78337f00160ae496.mockapi.io/api/v1/contacts*
+GET: *https://5e9935925eabe7001681c856.mockapi.io/api/v1/catalog*
 
-### Requisitos - Parte 2:
+### Regras:
 
-- Crie os *estados* do SPA.
-- Consuma a *API de contatos* no *ciclo de vida correto* do componente.
-- Implemente a **busca** para filtrar os contatos em tempo real.
-- Implemente os filtros de ordenação por *Nome*, *País*, *Empresa*, *Departamento* e *Data de Admissão*.
+- Deve implementar as funcionalidades apresentadas nos wireframes / layouts.
+- Deve ser mobile first, possuindo uma experiência satisfatória tanto em mobile quanto em desktop.
+- Deve consumir a API do catálogo de produtos.
+- O estado global da aplicação deverá ser gerenciado com Redux
+- Deve ser um SPA (Single Page Application).
+- Todos os produtos da API devem ser exibidos.
+- Utilize BEM CSS para escrever os estilos.
+- Deve-se fazer deploy do projeto, servindo-o no Netlify.
+- Não utilize frameworks CSS como Bootstrap, Foundation e afins.
 
-### Dicas:
 
-- Tudo pode ser resolvido em um único componente.
-- O *estado* será mais complexo, ou seja, será um objeto com múltiplas *propriedades*.
 
-### Iniciar o projeto:
 
-- Instale as dependências do projeto com o comando *yarn install* ou *npm install*.
-- Inicie o projeto com comando *yarn start* ou *npm start* / *npm run start*.
 
-**Preview:**
-
-[Contacts SPA](https://vimeo.com/414869096/55f4293a68)
-
-## Tópicos:
-
-Neste desafio você vai praticar os seus conhecimentos em:
-
-- **React**
-- **React - Ciclo de vida de componentes**
-- **Modularização**
-- **Fetch API**
-- **JS:** *Array.map*, *Array.filter*, *Array.reduce*, *Array.find*, *Array.sort*
-
-## Requisitos:
-
-* **[Node v13.8.0](https://nodejs.org/en/)** - ou superior, instalado em seu computador.
-* **[Create React App](https://github.com/facebook/create-react-app)**
-
-## Screenshot de Referência
-
-![](https://codenation-challenges.s3-us-west-1.amazonaws.com/react-14/screenshot.png)
 
 
 

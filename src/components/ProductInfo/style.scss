@@ -1,0 +1,128 @@
+
+.productSingle {
+    display: flex;
+    flex-wrap: wrap;
+    width: 66%;
+    margin: auto;
+}
+
+.ProductSingle__img {
+    width: 50%;
+    margin: 0;
+    position: relative;
+}
+
+.card__percentageDiscount {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    font-size: 1.2rem;
+    right: 0;
+    padding: 3px;
+    color: #fff;
+  }
+
+.product__sizes {
+    width: 100%;  
+}
+
+.product__sizes span {
+    font-size: 1.4rem;
+    color: #a7a7a7;
+    margin: 14px 0;
+    display: block;
+}
+
+.product__sizes  .error__size {
+    color: rgb(197, 51, 51);
+}
+
+.size {
+    padding: 6px;
+    width: 35px;
+    font-size: 1.6rem;
+    margin-right: 8px;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 5px;
+    background: transparent;
+    font-weight: bold;
+    transition: .2s ease-in-out;
+}
+
+.size:hover {
+    color: #fff;
+    background-color: #212529;
+}
+
+.size--selected {
+    color: #fff;
+    background-color: #212529;
+}
+
+.productSingle__descriptions {
+    width: 50%;
+    line-height: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 16px;
+    color: #41414d;
+    
+}
+
+.ProductSingle__button {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.product__name {
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    font-size: 2rem;
+}
+
+.product__price  {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.card__img {
+    overflow: hidden;
+    width: 100%;
+  }
+
+.product__price--from {
+    color: #a7a7a7;
+    text-decoration: line-through;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.product__price--to {
+    color: #e01414;
+  }
+  
+.product__installments {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #a7a7a7;
+}
+
+.button__addProduct {
+    background-color: #08c537;
+    color: #fff;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.8rem;
+    border-radius: 6px;
+    box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.51);
+}
+
+@media all and (max-width: 568px) {
+    .productSingle, .ProductSingle__img, .productSingle__descriptions {
+      width: 100%;
+    }
+
+}
